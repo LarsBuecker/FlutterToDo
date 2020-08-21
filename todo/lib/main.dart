@@ -46,6 +46,61 @@ class _ToDoState extends State<ToDo> {
         });
   }
 
+  void loadData() async {
+    Future.delayed(Duration(seconds: 0), () {
+      showDialog(
+          context: context,
+          builder: (context) => Dialog(
+                child: Container(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      CircularProgressIndicator(),
+                      Padding(
+                        padding: EdgeInsets.only(top: 20.0),
+                        child: Text("Loading"),
+                      ),
+                    ],
+                  ),
+                ),
+              ));
+    });
+
+    await Future.delayed(Duration(seconds: 5), () {
+      print('Connect to database');
+    });
+
+    Future<Map<String, bool>> dataFuture =
+        Future.delayed(Duration(seconds: 2), () {
+      return {
+        'Async lernen': true,
+        'Firebase aufsetzen': false,
+        'Loslegen': false
+      };
+    });
+
+    Future.delayed(Duration(seconds: 3), () {
+      print('Load data 2');
+    });
+
+    Map<String, bool> data = await dataFuture;
+
+    Future.delayed(Duration(seconds: 0), () {
+      setState(() {
+        todos = data;
+      });
+      Navigator.of(context).pop();
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
