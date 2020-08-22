@@ -77,7 +77,7 @@ class _ToDoState extends State<ToDo> {
       return {
         'Async lernen': true,
         'Firebase aufsetzen': false,
-        'Loslegen': false
+        'Datenbank anbindung': false
       };
     });
 
@@ -105,8 +105,8 @@ class _ToDoState extends State<ToDo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ToDo-App'),
-        backgroundColor: Color.fromRGBO(35, 152, 185, 100),
+        title: Text('Do Your Stuff'),
+        backgroundColor: Color.fromRGBO(50, 145, 255, 100),
       ),
       body: ListView.builder(
         itemCount: todos.length,
