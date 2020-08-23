@@ -23,7 +23,7 @@ class ToDoItem extends StatelessWidget {
           style: TextStyle(
             fontSize: 18.0,
             fontWeight: FontWeight.w600,
-            color: done ? Color.fromRGBO(50, 145, 255, 100) : Colors.black54,
+            color: done ? Color.fromRGBO(34, 167, 240, 100) : Colors.black54,
             decoration: done ? TextDecoration.lineThrough : TextDecoration.none,
           ),
         ),

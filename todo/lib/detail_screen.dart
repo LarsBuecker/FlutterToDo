@@ -8,43 +8,26 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: done ? Colors.green : Colors.red,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Detail Screen'),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color.fromRGBO(34, 167, 240, 100)
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 70),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Expanded(
-                child: Container(
-                    padding: EdgeInsets.all(20),
-                    alignment: Alignment.center,
-                    child: Text(
-                      done
-                          ? 'Das hast du schon erledigt:'
-                          : 'Das musst du noch machen:',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                      textAlign: TextAlign.center,
-                    ))),
-            Expanded(
-                child: Container(
-                    alignment: Alignment.center,
-                    child: Text(title,
-                        style: TextStyle(fontSize: 50, color: Colors.white)))),
-            Expanded(
-              child: IconButton(
-                iconSize: 60,
-                onPressed: () => Navigator.pop(context),
-                icon:
-                    Icon(done ? Icons.check : Icons.close, color: Colors.white),
-              ),
-            ),
-          ],
+        padding: EdgeInsets.all(16.0),
+        child: Column( <Widget> [
+          Text(title, 
+            textAlign: TextAlign.left,
+            style: TextStyle(
+          fontSize: 20.0, 
+          fontWeight: FontWeight.w500,), 
         ),
-      ),
+        ]
+          
+        )
+        
+      )
     );
   }
 }
+    

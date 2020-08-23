@@ -12,12 +12,7 @@ class ToDo extends StatefulWidget {
 }
 
 class _ToDoState extends State<ToDo> {
-  Map<String, bool> todos = {
-    'ToDo1': false,
-    'ToDo2': false,
-    'ToDo3': false,
-    'ToDo4': false,
-  };
+  Map<String, bool> todos = { };
 
   void addToDo(String todo) {
     setState(() {
@@ -75,7 +70,7 @@ class _ToDoState extends State<ToDo> {
     Future<Map<String, bool>> dataFuture =
         Future.delayed(Duration(seconds: 2), () {
       return {
-        'Async lernen': true,
+        'Async implementieren': true,
         'Firebase aufsetzen': false,
         'Datenbank anbindung': false
       };
@@ -106,7 +101,7 @@ class _ToDoState extends State<ToDo> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Do Your Stuff'),
-        backgroundColor: Color.fromRGBO(50, 145, 255, 100),
+        backgroundColor: Color.fromRGBO(34, 167, 240, 100),
       ),
       body: ListView.builder(
         itemCount: todos.length,

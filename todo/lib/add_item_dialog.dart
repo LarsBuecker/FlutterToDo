@@ -38,7 +38,7 @@ class _AddItemDialogState extends State<AddItemDialog> {
                 ),
                 RaisedButton(
                   onPressed: save,
-                  color: Color.fromRGBO(50, 145, 255, 100),
+                  color: Color.fromRGBO(34, 167, 240, 100),
                   child: Text('Save', style: TextStyle(color: Colors.white)),
                 )
               ],
