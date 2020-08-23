@@ -12,11 +12,7 @@ class ToDo extends StatefulWidget {
 }
 
 class _ToDoState extends State<ToDo> {
-<<<<<<< HEAD
   Map<String, bool> todos = { };
-=======
-  Map<String, bool> todos = {};
->>>>>>> 590b6298902901af80dcd6402993cd9964036d9e
 
   void addToDo(String todo) {
     setState(() {
