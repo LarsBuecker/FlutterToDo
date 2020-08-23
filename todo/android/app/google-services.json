@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "621477080381",
+    "firebase_url": "https://doyourstuff-ba4bb.firebaseio.com",
+    "project_id": "doyourstuff-ba4bb",
+    "storage_bucket": "doyourstuff-ba4bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621477080381:android:d62a6d7c9f3b37f1ed6954",
+        "android_client_info": {
+          "package_name": "com.carvin.doyourstuff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621477080381-jnntq24c1qk023ukm26r0l2185j5uibd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcJl2Xzy1G_PDqFrMUrssiQWHuyOZ8iWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621477080381-jnntq24c1qk023ukm26r0l2185j5uibd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

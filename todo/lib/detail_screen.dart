@@ -8,43 +8,32 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: done ? Colors.green : Colors.red,
-      appBar: AppBar(
-        title: Text('Detail Screen'),
-        backgroundColor: Colors.transparent,
-      ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 70),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Expanded(
-                child: Container(
-                    padding: EdgeInsets.all(20),
-                    alignment: Alignment.center,
-                    child: Text(
-                      done
-                          ? 'Das hast du schon erledigt:'
-                          : 'Das musst du noch machen:',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                      textAlign: TextAlign.center,
-                    ))),
-            Expanded(
-                child: Container(
-                    alignment: Alignment.center,
-                    child: Text(title,
-                        style: TextStyle(fontSize: 50, color: Colors.white)))),
-            Expanded(
-              child: IconButton(
-                iconSize: 60,
-                onPressed: () => Navigator.pop(context),
-                icon:
-                    Icon(done ? Icons.check : Icons.close, color: Colors.white),
-              ),
-            ),
-          ],
+        appBar: AppBar(
+          title: Text('Detail Screen'),
+          backgroundColor: Color.fromRGBO(50, 145, 255, 100),
         ),
-      ),
-    );
+        body: Padding(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            children: [
+              ListTile(
+                title: Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 17.0,
+                    decoration:
+                        done ? TextDecoration.lineThrough : TextDecoration.none,
+                  ),
+                ),
+              ),
+              ListTile(
+                title: Text('Termin hinzufügen'),
+                trailing: IconButton(
+                  icon: Icon(Icons.calendar_today),
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
